@@ -16,7 +16,7 @@ body{
 /* ===== HEADER IMAGE ===== */
 header{
     text-align:center;
-    padding:15px;
+    padding:10px;
 }
 
 header img{
@@ -35,44 +35,54 @@ header p{
     font-size:14px;
 }
 
-/* ===== IMAGE GALLERY ABOVE COLUMNS ===== */
-.image-gallery{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:6px;
-    padding:10px 15px;
+/* ===== BUTTONS ===== */
+.buttons a{
+    display:inline-block;
+    margin:6px;
+    padding:10px 16px;
+    background:#f5d76e;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
 }
 
-.image-gallery img{
-    width:100%;
-    height:160px;
-    object-fit:cover;
-    border:2px solid #f5d76e;
-}
-
-/* ===== MOVING SLIDER ===== */
+/* ===== MOVING IMAGES ===== */
 .moving-slider{
-    display:flex;
     overflow:hidden;
-    padding:6px 15px;
-    border-bottom:2px solid #f5d76e;
-    margin-bottom:10px;
+    background:#000;
+    padding:15px 0;
 }
 
 .moving-track{
     display:flex;
-    animation: move 6s linear infinite alternate;
+    width:max-content;
+    animation: move 5s linear infinite alternate;
 }
 
 .moving-track img{
-    width:calc(50% - 6px);
-    margin-right:6px;
+    height:170px;
+    margin:0 12px;
     border:2px solid #f5d76e;
 }
 
 @keyframes move{
-    0% {transform: translateX(0);}
-    100% {transform: translateX(-20%);}
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-20%); }
+}
+
+/* ===== STATIC IMAGES ===== */
+.static-images{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:15px;
+}
+
+.static-images img{
+    width:48%;
+    margin-bottom:12px;
+    border:2px solid #f5d76e;
 }
 
 /* ===== ORDER COLUMNS ===== */
@@ -80,7 +90,7 @@ header p{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    padding:0 15px 15px 15px;
+    padding:15px;
 }
 
 .column-item{
@@ -150,7 +160,6 @@ footer{
 }
 </style>
 </head>
-
 <body>
 
 <!-- ===== HEADER IMAGE ===== -->
@@ -168,7 +177,7 @@ footer{
 </div>
 </header>
 
-<!-- ===== IMAGE GALLERY ABOVE COLUMNS ===== -->
+<!-- ===== MOVING IMAGES (first two) ===== -->
 <div class="moving-slider">
 <div class="moving-track">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
@@ -176,7 +185,8 @@ footer{
 </div>
 </div>
 
-<div class="image-gallery">
+<!-- ===== STATIC IMAGES (rest) ===== -->
+<div class="static-images">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0102.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0103.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0104.jpg">
@@ -187,6 +197,10 @@ footer{
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0113.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0114.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0115.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0116.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0118.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0120.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0121.jpg">
 </div>
 
 <!-- ===== ORDER COLUMNS ===== -->
@@ -208,7 +222,6 @@ footer{
 <!-- ===== ORDER FORM ===== -->
 <div class="container">
 <form onsubmit="sendWhatsApp(); return false;">
-
 <label>Customer Name</label>
 <input type="text" id="cName" required>
 
@@ -225,7 +238,6 @@ footer{
 </select>
 
 <button type="submit">Submit via WhatsApp</button>
-
 </form>
 </div>
 
@@ -252,23 +264,17 @@ function addToSpecs(text){
     }
 }
 
-// Send WhatsApp message with all form fields
-function sendWhatsApp() {
-    const name = document.getElementById("cName").value;
-    const phone = document.getElementById("cPhone").value;
-    const specs = document.getElementById("cSpecs").value;
-    const delivery = document.getElementById("cDelivery").value;
+// Send WhatsApp with all form info
+function sendWhatsApp(){
+    const name = encodeURIComponent(document.getElementById("cName").value);
+    const phone = encodeURIComponent(document.getElementById("cPhone").value);
+    const specs = encodeURIComponent(document.getElementById("cSpecs").value);
+    const delivery = encodeURIComponent(document.getElementById("cDelivery").value);
 
-    const message = `Hello M & H GLOBAL AUTOS!%0A%0A` +
-        `I would like to place an order:%0A` +
-        `Name: ${encodeURIComponent(name)}%0A` +
-        `Phone: ${encodeURIComponent(phone)}%0A` +
-        `Specifications: ${encodeURIComponent(specs)}%0A` +
-        `Delivery to house: ${encodeURIComponent(delivery)}%0A%0AThank you!`;
+    const message = `Hello M & H GLOBAL AUTOS!%0A%0AI would like to place an order:%0AName: ${name}%0APhone: ${phone}%0ASpecifications:%0A${specs}%0AHome Delivery: ${delivery}`;
 
     window.open(`https://wa.me/2347031336663?text=${message}`, "_blank");
 }
 </script>
-
 </body>
 </html>
