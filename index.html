@@ -28,9 +28,8 @@ header {
   border-radius: 15px;
 }
 
-/* 🔥 REDUCED NAME SIZE */
 header h1 {
-  font-size: 28px; /* reduced */
+  font-size: 28px;
   margin-top: 15px;
   color: #FFD700;
 }
@@ -137,16 +136,42 @@ No: 134 Upper Mission Road, Opposite New Benin Market.
 </div>
 
 <div class="customer-form">
+
+<h3 style="text-align:center;color:gold;">Customers Order Form</h3>
+
 <form id="orderForm">
-<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="name" placeholder="Customer Name" required>
+
+<input type="tel" id="phone" placeholder="Customer Phone Number" required>
+
+<input type="date" id="pickup" required>
+
+<input type="text" id="phoneWanted" placeholder="What phone do you want to buy?" required>
+
+<select id="brand" required>
+<option value="">Select Phone Brand</option>
+<option>Infinix</option>
+<option>Oppo</option>
+<option>Lenovo</option>
+<option>Samsung</option>
+<option>Itel</option>
+<option>Gionee</option>
+<option>iPhone</option>
+<option>Tecno</option>
+</select>
+
 <select id="product" required>
-<option value="">Select Product</option>
+<option value="">Select Product Type</option>
 <option>Smartphone</option>
 <option>Gadget</option>
 <option>Accessory</option>
 </select>
-<textarea id="specs" placeholder="Details" required></textarea>
+
+<textarea id="specs" placeholder="Additional Details (Color, Storage, etc.)" required></textarea>
+
 <button type="submit">Submit</button>
+
 </form>
 </div>
 
@@ -166,10 +191,21 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
 e.preventDefault();
 
 let name = document.getElementById('name').value;
+let phone = document.getElementById('phone').value;
+let pickup = document.getElementById('pickup').value;
+let phoneWanted = document.getElementById('phoneWanted').value;
+let brand = document.getElementById('brand').value;
 let product = document.getElementById('product').value;
 let specs = document.getElementById('specs').value;
 
-let message = `Hello, I want to place an order.%0AName: ${name}%0AProduct: ${product}%0ADetails: ${specs}`;
+let message = `Hello, I want to place an order.%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Pick-Up Date: ${pickup}%0A
+Phone Wanted: ${phoneWanted}%0A
+Brand: ${brand}%0A
+Product Type: ${product}%0A
+Details: ${specs}`;
 
 window.open(`https://wa.me/2348037019193?text=${message}`, '_blank');
 });
