@@ -2,213 +2,220 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JOHN WHYTE TELECOMS AND GLOBAL RESOURCES</title>
+<title>M & H GLOBAL AUTOS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0b0b0b;
-  color: #fff8dc;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#000;
+    color:#f5d76e;
 }
 
 /* HEADER */
-header {
-  text-align: center;
-  padding: 30px 15px;
-  background: linear-gradient(135deg, #0a2a66, #FFD700);
+header{
+    text-align:center;
+    padding:10px;
+}
+header img{
+    width:100%;
+    max-height:260px;
+    object-fit:contain;
+}
+header p{color:#fff;}
+
+.buttons a{
+    display:inline-block;
+    margin:6px;
+    padding:10px 16px;
+    background:#f5d76e;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
 }
 
-.header-img {
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  display: block;
-  border-radius: 15px;
+/* MOVING */
+.moving-slider{
+    overflow:hidden;
+    padding:15px 0;
+}
+.moving-track{
+    display:flex;
+    animation:move 6s linear infinite alternate;
+}
+.moving-track img{
+    height:170px;
+    margin:0 12px;
+    border:2px solid #f5d76e;
+}
+@keyframes move{
+    from{transform:translateX(0);}
+    to{transform:translateX(-15%);}
 }
 
-header h1 {
-  font-size: 28px;
-  margin-top: 15px;
-  color: #FFD700;
+/* STATIC GRID */
+.static-images{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:15px;
+}
+.static-images img{
+    width:48%;
+    margin-bottom:12px;
+    border:2px solid #f5d76e;
 }
 
-header p {
-  font-size: 16px;
-  max-width: 700px;
-  margin: auto;
+/* COLUMNS */
+.columns{
+    display:flex;
+    flex-wrap:wrap;
+    padding:15px;
 }
-
-/* SLIDER */
-.slider {
-  max-width: 1200px;
-  margin: 20px auto;
-}
-
-.slider img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 10px;
-  padding: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
+.column-item{
+    flex:1 1 45%;
+    margin:6px;
+    padding:12px;
+    border:2px solid #f5d76e;
+    text-align:center;
+    cursor:pointer;
 }
 
 /* FORM */
-.customer-form {
-  padding: 20px;
+.container{padding:15px;}
+input, textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+button{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    background:#f5d76e;
+    border:none;
 }
 
-.customer-form input,
-.customer-form textarea,
-.customer-form select {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-}
-
-/* CTA */
-.cta-buttons {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.cta-buttons a {
-  padding: 15px 25px;
-  margin: 10px;
-  display: inline-block;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.whatsapp-btn { background: #25d366; color: black; }
-.call-btn { background: gold; color: black; }
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0a2a66;
-}
+/* MAP */
+.map{margin:20px;border:2px solid #f5d76e;}
+footer{text-align:center;color:#fff;padding:15px;}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./refs/heads/main/1775673710898.png" class="header-img">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/1775674236043.png">
 
-<h1>JOHN WHYTE TELECOMS & GLOBAL RESOURCES</h1>
+<h2>M & H GLOBAL AUTOS</h2>
 
-<p>
-Dealers in quality smartphones, gadgets, and accessories.  
-No: 134 Upper Mission Road, Opposite New Benin Market.
-</p>
+<div class="buttons">
+<a href="https://wa.me/2348128778857">WHATSAPP</a>
+<a href="https://www.tiktok.com/@markhenry880?_r=1&_t=ZS-95LCw9gaiEW">TIKTOK</a>
+<a href="https://www.facebook.com/share/1CSsJwS6Sn/">FACEBOOK</a>
+</div>
 </header>
 
-<div class="slider">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205638.jpg">
+<!-- MOVING (FIRST TWO) -->
+<div class="moving-slider">
+<div class="moving-track">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0100.jpg">
+</div>
 </div>
 
-<h2 style="text-align:center;color:gold;">Our Products</h2>
+<!-- ALL REMAINING IMAGES -->
+<div class="static-images">
 
-<div class="gallery">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205649.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205710.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205820.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205850.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-205943.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/Screenshot_20250718-210701.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/d8572d17c7a6c769bf26cedf47015891fb054c17/images%20(2).jpeg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20250826-130552.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/images%20(6).jpeg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/xiaomi-redmi-a3-64gb-rom-3gb-ram.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/John-White-/a8c93f32fc16f49c275d953ef87b10e9f14fd4e9/Screenshot_20260219-044836.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0102.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0103.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0104.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0105.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0108.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0110.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0112.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0113.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0114.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0115.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0116.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0118.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0120.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0121.jpg">
+
 </div>
 
-<div class="customer-form">
+<!-- COLUMNS -->
+<h2 style="text-align:center;">Place Your Orders</h2>
+<div class="columns">
 
-<h3 style="text-align:center;color:gold;">Customers Order Form</h3>
+<div class="column-item" onclick="addToSpecs('Bonnet')">Bonnet</div>
+<div class="column-item" onclick="addToSpecs('Bumper')">Bumper</div>
+<div class="column-item" onclick="addToSpecs('Full Light')">Full Light</div>
+<div class="column-item" onclick="addToSpecs('Back Light')">Back Light</div>
+<div class="column-item" onclick="addToSpecs('Fender')">Fender</div>
+<div class="column-item" onclick="addToSpecs('Grill')">Grill</div>
+<div class="column-item" onclick="addToSpecs('Side Mirror')">Side Mirror</div>
+<div class="column-item" onclick="addToSpecs('Door')">Door</div>
+<div class="column-item" onclick="addToSpecs('Toyota')">Toyota</div>
+<div class="column-item" onclick="addToSpecs('Lexus')">Lexus</div>
 
-<form id="orderForm">
+<div class="column-item" onclick="setDelivery('Yes')">Home Delivery: YES</div>
+<div class="column-item" onclick="setDelivery('No')">Home Delivery: NO</div>
 
-<input type="text" id="name" placeholder="Customer Name" required>
+</div>
 
-<input type="tel" id="phone" placeholder="Customer Phone Number" required>
+<!-- FORM -->
+<div class="container">
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Name" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+<textarea id="specs" placeholder="Specifications"></textarea>
+<input type="text" id="delivery" placeholder="Delivery" readonly>
 
-<input type="date" id="pickup" required>
-
-<input type="text" id="phoneWanted" placeholder="What phone do you want to buy?" required>
-
-<select id="brand" required>
-<option value="">Select Phone Brand</option>
-<option>Infinix</option>
-<option>Oppo</option>
-<option>Lenovo</option>
-<option>Samsung</option>
-<option>Itel</option>
-<option>Gionee</option>
-<option>iPhone</option>
-<option>Tecno</option>
-</select>
-
-<select id="product" required>
-<option value="">Select Product Type</option>
-<option>Smartphone</option>
-<option>Gadget</option>
-<option>Accessory</option>
-</select>
-
-<textarea id="specs" placeholder="Additional Details (Color, Storage, etc.)" required></textarea>
-
-<button type="submit">Submit</button>
-
+<button type="submit">Submit via WhatsApp</button>
 </form>
 </div>
 
-<div class="cta-buttons">
-<a class="whatsapp-btn" href="https://wa.me/2348037019193" target="_blank">💬 WhatsApp</a>
-<a class="call-btn" href="tel:08056374089">📞 Call</a>
+<!-- MAP -->
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Shop%20C%2073%20Osoro%20Street%20Papa%20Ajao%20Mushin%20Lagos&output=embed" width="100%" height="300"></iframe>
 </div>
 
-<footer>
-© 2026 JOHN WHYTE TELECOMS & GLOBAL RESOURCES  
-<br>No: 134 Upper Mission Road, Opposite New Benin Market  
-<br>Call: 08056374089 | WhatsApp: 2348037019193
-</footer>
+<footer>© M & H GLOBAL AUTOS</footer>
 
 <script>
-document.getElementById('orderForm').addEventListener('submit', function(e){
-e.preventDefault();
+function addToSpecs(item){
+    document.getElementById("specs").value += item + ", ";
+}
 
-let name = document.getElementById('name').value;
-let phone = document.getElementById('phone').value;
-let pickup = document.getElementById('pickup').value;
-let phoneWanted = document.getElementById('phoneWanted').value;
-let brand = document.getElementById('brand').value;
-let product = document.getElementById('product').value;
-let specs = document.getElementById('specs').value;
+function setDelivery(value){
+    document.getElementById("delivery").value = value;
+}
 
-let message = `Hello, I want to place an order.%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
-Pick-Up Date: ${pickup}%0A
-Phone Wanted: ${phoneWanted}%0A
-Brand: ${brand}%0A
-Product Type: ${product}%0A
-Details: ${specs}`;
+function sendWhatsApp(){
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let specs = document.getElementById("specs").value;
+    let delivery = document.getElementById("delivery").value;
 
-window.open(`https://wa.me/2348037019193?text=${message}`, '_blank');
-});
+    let message = "Hello M & H GLOBAL AUTOS!\n\n"
+    + "Name: " + name + "\n"
+    + "Phone: " + phone + "\n"
+    + "Specifications: " + specs + "\n"
+    + "Home Delivery: " + delivery;
+
+    let url = "https://wa.me/2348128778857?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
 </script>
 
 </body>
