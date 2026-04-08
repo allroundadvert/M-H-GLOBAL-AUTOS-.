@@ -35,12 +35,52 @@ header p{
     font-size:14px;
 }
 
+/* ===== IMAGE GALLERY ABOVE COLUMNS ===== */
+.image-gallery{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:6px;
+    padding:10px 15px;
+}
+
+.image-gallery img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border:2px solid #f5d76e;
+}
+
+/* ===== MOVING SLIDER ===== */
+.moving-slider{
+    display:flex;
+    overflow:hidden;
+    padding:6px 15px;
+    border-bottom:2px solid #f5d76e;
+    margin-bottom:10px;
+}
+
+.moving-track{
+    display:flex;
+    animation: move 6s linear infinite alternate;
+}
+
+.moving-track img{
+    width:calc(50% - 6px);
+    margin-right:6px;
+    border:2px solid #f5d76e;
+}
+
+@keyframes move{
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-20%);}
+}
+
 /* ===== ORDER COLUMNS ===== */
 .columns{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    padding:15px;
+    padding:0 15px 15px 15px;
 }
 
 .column-item{
@@ -53,36 +93,6 @@ header p{
     border-radius:5px;
     flex: 1 1 45%;
     text-align:center;
-}
-
-/* ===== SLIDER ===== */
-.slider { overflow: hidden; width: 100%; margin-bottom: 10px; }
-.slide-track {
-  display: flex;
-  animation: slide 3s infinite alternate;
-}
-.slide-track img {
-  width: 50%;
-  height: 180px;
-  object-fit: cover;
-}
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-10%); }
-}
-
-/* ===== STATIC IMAGES ===== */
-.static-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding: 15px;
-}
-.static-images img {
-  width: 100%;
-  border: 2px solid #f5d76e;
-  height: 180px;
-  object-fit: cover;
 }
 
 /* ===== ORDER FORM ===== */
@@ -158,6 +168,27 @@ footer{
 </div>
 </header>
 
+<!-- ===== IMAGE GALLERY ABOVE COLUMNS ===== -->
+<div class="moving-slider">
+<div class="moving-track">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0100.jpg">
+</div>
+</div>
+
+<div class="image-gallery">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0102.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0103.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0104.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0105.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0108.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0110.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0112.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0113.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0114.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0115.jpg">
+</div>
+
 <!-- ===== ORDER COLUMNS ===== -->
 <h2 style="text-align:center; margin-top:20px;">Place Your Orders</h2>
 <div class="columns">
@@ -172,32 +203,6 @@ footer{
 <div class="column-item" onclick="addToSpecs('Accessories')">Accessories</div>
 <div class="column-item" onclick="addToSpecs('Toyota')">Toyota</div>
 <div class="column-item" onclick="addToSpecs('Lexus')">Lexus</div>
-</div>
-
-<!-- ===== MOVING IMAGES ===== -->
-<div class="slider">
-  <div class="slide-track">
-    <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0100.jpg">
-  </div>
-</div>
-
-<!-- ===== STATIC IMAGES ===== -->
-<div class="static-images">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0102.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0103.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0104.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0105.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0108.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0110.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0112.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0113.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0114.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0115.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0116.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0118.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0120.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0121.jpg">
 </div>
 
 <!-- ===== ORDER FORM ===== -->
@@ -247,18 +252,19 @@ function addToSpecs(text){
     }
 }
 
-// Send WhatsApp message with full order details
-function sendWhatsApp(){
+// Send WhatsApp message with all form fields
+function sendWhatsApp() {
     const name = document.getElementById("cName").value;
     const phone = document.getElementById("cPhone").value;
     const specs = document.getElementById("cSpecs").value;
     const delivery = document.getElementById("cDelivery").value;
 
-    const message = `Hello M & H GLOBAL AUTOS!%0A%0AI would like to place an order:%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
-Specifications: ${specs}%0A
-Home Delivery: ${delivery}%0A%0AThank you.`;
+    const message = `Hello M & H GLOBAL AUTOS!%0A%0A` +
+        `I would like to place an order:%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Specifications: ${encodeURIComponent(specs)}%0A` +
+        `Delivery to house: ${encodeURIComponent(delivery)}%0A%0AThank you!`;
 
     window.open(`https://wa.me/2347031336663?text=${message}`, "_blank");
 }
