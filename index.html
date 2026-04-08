@@ -13,7 +13,7 @@ body{
     color:#f5d76e;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER IMAGE ===== */
 header{
     text-align:center;
     padding:15px;
@@ -35,58 +35,6 @@ header p{
     font-size:14px;
 }
 
-/* ===== BUTTONS ===== */
-.buttons a{
-    display:inline-block;
-    margin:6px;
-    padding:10px 16px;
-    background:#f5d76e;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:5px;
-}
-
-/* ===== MOVING SLIDER ===== */
-.slider{
-    overflow:hidden;
-    padding:10px;
-}
-
-.slide-track{
-    display:flex;
-    width:max-content;
-    animation:slide 6s linear infinite alternate;
-}
-
-.slide-track img{
-    width:50vw;
-    height:180px;
-    object-fit:cover;
-    margin:5px;
-    border:2px solid #f5d76e;
-}
-
-@keyframes slide{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
-}
-
-/* ===== GALLERY ===== */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-    padding:10px;
-}
-
-.gallery img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border:2px solid #f5d76e;
-}
-
 /* ===== ORDER COLUMNS ===== */
 .columns{
     display:flex;
@@ -97,21 +45,47 @@ header p{
 
 .column-item{
     background:#111;
+    color:#f5d76e;
     border:2px solid #f5d76e;
     padding:12px;
     margin:6px;
-    flex:1 1 45%;
-    text-align:center;
     cursor:pointer;
     border-radius:5px;
+    flex: 1 1 45%;
+    text-align:center;
 }
 
-.column-item:hover{
-    background:#f5d76e;
-    color:#000;
+/* ===== SLIDER ===== */
+.slider { overflow: hidden; width: 100%; margin-bottom: 10px; }
+.slide-track {
+  display: flex;
+  animation: slide 3s infinite alternate;
+}
+.slide-track img {
+  width: 50%;
+  height: 180px;
+  object-fit: cover;
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10%); }
 }
 
-/* ===== FORM ===== */
+/* ===== STATIC IMAGES ===== */
+.static-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 15px;
+}
+.static-images img {
+  width: 100%;
+  border: 2px solid #f5d76e;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ===== ORDER FORM ===== */
 .container{
     padding:15px;
 }
@@ -123,24 +97,32 @@ form{
     border-radius:8px;
 }
 
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
 input, select, textarea{
     width:100%;
     padding:8px;
-    margin-top:8px;
-    border:none;
+    margin-top:5px;
     border-radius:4px;
+    border:none;
     background:#222;
     color:#f5d76e;
 }
 
 button{
     width:100%;
-    margin-top:15px;
+    margin-top:18px;
     padding:12px;
     background:#f5d76e;
     color:#000;
     border:none;
     font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
 }
 
 /* ===== MAP ===== */
@@ -149,40 +131,59 @@ button{
     border:2px solid #f5d76e;
 }
 
+/* ===== FOOTER ===== */
 footer{
     text-align:center;
     padding:15px;
     color:#fff;
+    font-size:13px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER IMAGE ===== -->
 <header>
-<img src="https://raw.githubusercontent.com/allroundadvert/M-K-GLOBAL-AUTOS-/245ff13fbbade84acba743c73ce97952d8ca0ec7/.github/workflows/1775644012285.png">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/1775674236043.png" alt="M & H GLOBAL AUTOS">
 
 <h1>M & H GLOBAL AUTOS</h1>
-<p>Expert in Upgrading and Conversion Kit</p>
+<p><b>Expert in Upgrading and Conversion Kit</b></p>
+<p>Bonnet, Bumper, Full Light, Back Light, Fender, Grill, Side Mirror, Door and Other Accessories, Toyota & Lexus</p>
 
 <div class="buttons">
 <a href="https://wa.me/2347031336663">WHATSAPP</a>
-<a href="https://www.tiktok.com/@markhenry880">TIKTOK</a>
+<a href="https://www.tiktok.com/@markhenry880?_r=1&_t=ZS-95LCw9gaiEW">TIKTOK</a>
 <a href="https://www.facebook.com/share/1CSsJwS6Sn/">FACEBOOK</a>
 </div>
 </header>
 
-<!-- ===== MOVING FIRST 2 IMAGES ===== -->
-<div class="slider">
-<div class="slide-track">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
-</div>
+<!-- ===== ORDER COLUMNS ===== -->
+<h2 style="text-align:center; margin-top:20px;">Place Your Orders</h2>
+<div class="columns">
+<div class="column-item" onclick="addToSpecs('Upgrading and conversion Bonnet')">Upgrading and conversion Bonnet</div>
+<div class="column-item" onclick="addToSpecs('Bumper')">Bumper</div>
+<div class="column-item" onclick="addToSpecs('Full Light')">Full Light</div>
+<div class="column-item" onclick="addToSpecs('Back Light')">Back Light</div>
+<div class="column-item" onclick="addToSpecs('Fender')">Fender</div>
+<div class="column-item" onclick="addToSpecs('Grill')">Grill</div>
+<div class="column-item" onclick="addToSpecs('Side Mirror')">Side Mirror</div>
+<div class="column-item" onclick="addToSpecs('Door')">Door</div>
+<div class="column-item" onclick="addToSpecs('Accessories')">Accessories</div>
+<div class="column-item" onclick="addToSpecs('Toyota')">Toyota</div>
+<div class="column-item" onclick="addToSpecs('Lexus')">Lexus</div>
 </div>
 
-<!-- ===== GALLERY ===== -->
-<div class="gallery">
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0100.jpg">
+<!-- ===== MOVING IMAGES ===== -->
+<div class="slider">
+  <div class="slide-track">
+    <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0100.jpg">
+  </div>
+</div>
+
+<!-- ===== STATIC IMAGES ===== -->
+<div class="static-images">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0102.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0103.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0104.jpg">
@@ -199,57 +200,67 @@ footer{
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0121.jpg">
 </div>
 
-<!-- ===== REST (UNCHANGED) ===== -->
-
-<h2 style="text-align:center;">Place Your Orders</h2>
-
-<div class="columns">
-<div class="column-item" onclick="addToSpecs('Bonnet')">Bonnet</div>
-<div class="column-item" onclick="addToSpecs('Bumper')">Bumper</div>
-<div class="column-item" onclick="addToSpecs('Full Light')">Full Light</div>
-<div class="column-item" onclick="addToSpecs('Back Light')">Back Light</div>
-<div class="column-item" onclick="addToSpecs('Fender')">Fender</div>
-<div class="column-item" onclick="addToSpecs('Grill')">Grill</div>
-<div class="column-item" onclick="addToSpecs('Side Mirror')">Side Mirror</div>
-<div class="column-item" onclick="addToSpecs('Door')">Door</div>
-<div class="column-item" onclick="addToSpecs('Toyota')">Toyota</div>
-<div class="column-item" onclick="addToSpecs('Lexus')">Lexus</div>
-</div>
-
+<!-- ===== ORDER FORM ===== -->
 <div class="container">
 <form onsubmit="sendWhatsApp(); return false;">
-<input type="text" id="cName" placeholder="Name" required>
-<input type="tel" id="cPhone" placeholder="Phone" required>
-<textarea id="cSpecs" placeholder="Specifications"></textarea>
 
+<label>Customer Name</label>
+<input type="text" id="cName" required>
+
+<label>Phone Number</label>
+<input type="tel" id="cPhone" required>
+
+<label>Specifications</label>
+<textarea id="cSpecs" rows="5" placeholder="Click the items above to add them here" required></textarea>
+
+<label>Are we delivering to your house?</label>
 <select id="cDelivery">
 <option>Yes</option>
 <option>No</option>
 </select>
 
-<button>Submit</button>
+<button type="submit">Submit via WhatsApp</button>
+
 </form>
 </div>
 
+<!-- ===== MAP ===== -->
 <div class="map">
-<iframe src="https://www.google.com/maps?q=Shop%20C%2073%20Lagos&output=embed" width="100%" height="300"></iframe>
+<iframe 
+src="https://www.google.com/maps?q=Shop%20C%2073%2C%20Number%2036%20Osoro%20Street%2C%20Papa%20Ajao%2C%20Ladipo%2C%20Mushin%2C%20Lagos&output=embed"
+width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+</iframe>
 </div>
 
+<footer>
+© M & H GLOBAL AUTOS – Trusted Experts in Upgrading and Conversion Kits
+</footer>
+
 <script>
+// Add clicked column item to the specifications textarea
 function addToSpecs(text){
-let box=document.getElementById("cSpecs");
-box.value += (box.value ? "\n":"") + text;
+    const specs = document.getElementById("cSpecs");
+    if(specs.value){
+        specs.value += "\n" + text;
+    } else {
+        specs.value = text;
+    }
 }
 
+// Send WhatsApp message with full order details
 function sendWhatsApp(){
-let name=document.getElementById("cName").value;
-let phone=document.getElementById("cPhone").value;
-let specs=document.getElementById("cSpecs").value.replace(/\n/g,"%0A");
-let delivery=document.getElementById("cDelivery").value;
+    const name = document.getElementById("cName").value;
+    const phone = document.getElementById("cPhone").value;
+    const specs = document.getElementById("cSpecs").value;
+    const delivery = document.getElementById("cDelivery").value;
 
-let msg=`Hello M & H GLOBAL AUTOS!%0AName:${name}%0APhone:${phone}%0ASpecs:%0A${specs}%0ADelivery:${delivery}`;
+    const message = `Hello M & H GLOBAL AUTOS!%0A%0AI would like to place an order:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Specifications: ${specs}%0A
+Home Delivery: ${delivery}%0A%0AThank you.`;
 
-window.open(`https://wa.me/2347031336663?text=${msg}`);
+    window.open(`https://wa.me/2347031336663?text=${message}`, "_blank");
 }
 </script>
 
