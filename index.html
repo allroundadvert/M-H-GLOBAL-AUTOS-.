@@ -13,29 +13,19 @@ body{
     color:#f5d76e;
 }
 
-/* ===== HEADER IMAGE ===== */
+/* HEADER */
 header{
     text-align:center;
     padding:10px;
 }
-
 header img{
     width:100%;
     max-height:260px;
     object-fit:contain;
-    background:#000;
 }
+header p{ color:#fff; }
 
-header h1{
-    margin:10px 0 5px;
-}
-
-header p{
-    color:#fff;
-    font-size:14px;
-}
-
-/* ===== BUTTONS ===== */
+/* BUTTONS */
 .buttons a{
     display:inline-block;
     margin:6px;
@@ -47,137 +37,89 @@ header p{
     border-radius:5px;
 }
 
-/* ===== MOVING IMAGES ===== */
+/* MOVING */
 .moving-slider{
     overflow:hidden;
-    background:#000;
     padding:15px 0;
 }
-
 .moving-track{
     display:flex;
-    width:max-content;
-    animation: move 5s linear infinite alternate;
+    animation: move 6s linear infinite alternate;
 }
-
 .moving-track img{
     height:170px;
     margin:0 12px;
     border:2px solid #f5d76e;
 }
-
 @keyframes move{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-20%); }
+    from{transform:translateX(0);}
+    to{transform:translateX(-15%);}
 }
 
-/* ===== STATIC IMAGES ===== */
+/* STATIC GRID */
 .static-images{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
     padding:15px;
 }
-
 .static-images img{
     width:48%;
     margin-bottom:12px;
     border:2px solid #f5d76e;
 }
 
-/* ===== ORDER COLUMNS ===== */
+/* COLUMNS */
 .columns{
     display:flex;
     flex-wrap:wrap;
-    justify-content:space-between;
     padding:15px;
 }
-
 .column-item{
-    background:#111;
-    color:#f5d76e;
-    border:2px solid #f5d76e;
-    padding:12px;
+    flex:1 1 45%;
     margin:6px;
-    cursor:pointer;
-    border-radius:5px;
-    flex: 1 1 45%;
-    text-align:center;
-}
-
-/* ===== ORDER FORM ===== */
-.container{
-    padding:15px;
-}
-
-form{
-    background:#111;
+    padding:12px;
     border:2px solid #f5d76e;
-    padding:20px;
-    border-radius:8px;
+    text-align:center;
+    cursor:pointer;
 }
 
-label{
-    display:block;
-    margin-top:12px;
-    font-weight:bold;
-}
-
-input, select, textarea{
+/* FORM */
+.container{padding:15px;}
+input, textarea, select{
     width:100%;
     padding:8px;
     margin-top:5px;
-    border-radius:4px;
-    border:none;
-    background:#222;
-    color:#f5d76e;
 }
-
 button{
     width:100%;
-    margin-top:18px;
+    margin-top:15px;
     padding:12px;
     background:#f5d76e;
-    color:#000;
     border:none;
-    font-weight:bold;
-    border-radius:5px;
-    cursor:pointer;
 }
 
-/* ===== MAP ===== */
-.map{
-    margin:20px;
-    border:2px solid #f5d76e;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    text-align:center;
-    padding:15px;
-    color:#fff;
-    font-size:13px;
-}
+/* MAP */
+.map{margin:20px;border:2px solid #f5d76e;}
+footer{text-align:center;color:#fff;padding:15px;}
 </style>
 </head>
+
 <body>
 
-<!-- ===== HEADER IMAGE ===== -->
 <header>
-<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/1775674236043.png" alt="M & H GLOBAL AUTOS">
+<img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/1775674236043.png">
 
-<h1>M & H GLOBAL AUTOS</h1>
-<p><b>Expert in Upgrading and Conversion Kit</b></p>
-<p>Bonnet, Bumper, Full Light, Back Light, Fender, Grill, Side Mirror, Door and Other Accessories, Toyota & Lexus</p>
+<h2>M & H GLOBAL AUTOS</h2>
 
 <div class="buttons">
-<a href="https://wa.me/2347031336663">WHATSAPP</a>
+<a href="https://wa.me/2348128778857">WHATSAPP</a>
 <a href="https://www.tiktok.com/@markhenry880?_r=1&_t=ZS-95LCw9gaiEW">TIKTOK</a>
 <a href="https://www.facebook.com/share/1CSsJwS6Sn/">FACEBOOK</a>
 </div>
 </header>
 
-<!-- ===== MOVING IMAGES (first two) ===== -->
+<!-- MOVING (FIRST 2) -->
 <div class="moving-slider">
 <div class="moving-track">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0099.jpg">
@@ -185,28 +127,36 @@ footer{
 </div>
 </div>
 
-<!-- ===== STATIC IMAGES (rest) ===== -->
+<!-- ALL OTHER IMAGES -->
 <div class="static-images">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0102.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0103.jpg">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0104.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0105.jpg">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0108.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0110.jpg">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0112.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0113.jpg">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0114.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0115.jpg">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0116.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0118.jpg">
+
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0120.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/M-H-GLOBAL-AUTOS-./68fa35d8483cf251f07436dd150e432f8b7eda5b/IMG-20260407-WA0121.jpg">
+
 </div>
 
-<!-- ===== ORDER COLUMNS ===== -->
-<h2 style="text-align:center; margin-top:20px;">Place Your Orders</h2>
+<!-- COLUMNS -->
+<h2 style="text-align:center;">Place Your Orders</h2>
 <div class="columns">
-<div class="column-item" onclick="addToSpecs('Upgrading and conversion Bonnet')">Upgrading and conversion Bonnet</div>
+<div class="column-item" onclick="addToSpecs('Bonnet')">Bonnet</div>
 <div class="column-item" onclick="addToSpecs('Bumper')">Bumper</div>
 <div class="column-item" onclick="addToSpecs('Full Light')">Full Light</div>
 <div class="column-item" onclick="addToSpecs('Back Light')">Back Light</div>
@@ -214,25 +164,18 @@ footer{
 <div class="column-item" onclick="addToSpecs('Grill')">Grill</div>
 <div class="column-item" onclick="addToSpecs('Side Mirror')">Side Mirror</div>
 <div class="column-item" onclick="addToSpecs('Door')">Door</div>
-<div class="column-item" onclick="addToSpecs('Accessories')">Accessories</div>
 <div class="column-item" onclick="addToSpecs('Toyota')">Toyota</div>
 <div class="column-item" onclick="addToSpecs('Lexus')">Lexus</div>
 </div>
 
-<!-- ===== ORDER FORM ===== -->
+<!-- FORM -->
 <div class="container">
 <form onsubmit="sendWhatsApp(); return false;">
-<label>Customer Name</label>
-<input type="text" id="cName" required>
+<input type="text" id="name" placeholder="Name" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+<textarea id="specs" placeholder="Specifications"></textarea>
 
-<label>Phone Number</label>
-<input type="tel" id="cPhone" required>
-
-<label>Specifications</label>
-<textarea id="cSpecs" rows="5" placeholder="Click the items above to add them here" required></textarea>
-
-<label>Are we delivering to your house?</label>
-<select id="cDelivery">
+<select id="delivery">
 <option>Yes</option>
 <option>No</option>
 </select>
@@ -241,40 +184,29 @@ footer{
 </form>
 </div>
 
-<!-- ===== MAP ===== -->
+<!-- MAP -->
 <div class="map">
-<iframe 
-src="https://www.google.com/maps?q=Shop%20C%2073%2C%20Number%2036%20Osoro%20Street%2C%20Papa%20Ajao%2C%20Ladipo%2C%20Mushin%2C%20Lagos&output=embed"
-width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
-</iframe>
+<iframe src="https://www.google.com/maps?q=Shop%20C%2073%20Osoro%20Street%20Papa%20Ajao%20Mushin%20Lagos&output=embed" width="100%" height="300"></iframe>
 </div>
 
-<footer>
-© M & H GLOBAL AUTOS – Trusted Experts in Upgrading and Conversion Kits
-</footer>
+<footer>© M & H GLOBAL AUTOS</footer>
 
 <script>
-// Add clicked column item to the specifications textarea
-function addToSpecs(text){
-    const specs = document.getElementById("cSpecs");
-    if(specs.value){
-        specs.value += "\n" + text;
-    } else {
-        specs.value = text;
-    }
+function addToSpecs(item){
+    document.getElementById("specs").value += item + ", ";
 }
 
-// Send WhatsApp with all form info
 function sendWhatsApp(){
-    const name = encodeURIComponent(document.getElementById("cName").value);
-    const phone = encodeURIComponent(document.getElementById("cPhone").value);
-    const specs = encodeURIComponent(document.getElementById("cSpecs").value);
-    const delivery = encodeURIComponent(document.getElementById("cDelivery").value);
+    let name = encodeURIComponent(document.getElementById("name").value);
+    let phone = encodeURIComponent(document.getElementById("phone").value);
+    let specs = encodeURIComponent(document.getElementById("specs").value);
+    let delivery = encodeURIComponent(document.getElementById("delivery").value);
 
-    const message = `Hello M & H GLOBAL AUTOS!%0A%0AI would like to place an order:%0AName: ${name}%0APhone: ${phone}%0ASpecifications:%0A${specs}%0AHome Delivery: ${delivery}`;
+    let msg = `Hello M & H GLOBAL AUTOS!%0AName: ${name}%0APhone: ${phone}%0ASpecs: ${specs}%0ADelivery: ${delivery}`;
 
-    window.open(`https://wa.me/2347031336663?text=${message}`, "_blank");
+    window.open(`https://wa.me/2348128778857?text=${msg}`, "_blank");
 }
 </script>
+
 </body>
 </html>
